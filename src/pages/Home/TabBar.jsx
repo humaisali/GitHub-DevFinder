@@ -10,7 +10,7 @@
 export default function TabBar({ tabs, activeTab, onChange }) {
   return (
     <div
-      className="flex mb-5"
+      className="flex mb-5 gap-1 overflow-x-auto"
       style={{ borderBottom: '1px solid #30363d' }}
     >
       {tabs.map((tab) => {

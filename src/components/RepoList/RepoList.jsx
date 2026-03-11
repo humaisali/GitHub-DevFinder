@@ -53,7 +53,7 @@ export default function RepoList({ repos }) {
           No repositories match the current filter.
         </div>
       ) : (
-        <div className="grid gap-3 mt-4" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))' }}>
+        <div className="grid gap-3 mt-4" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
           {displayedRepos.map((repo) => (
             <RepoCard key={repo.id} repo={repo} />
           ))}

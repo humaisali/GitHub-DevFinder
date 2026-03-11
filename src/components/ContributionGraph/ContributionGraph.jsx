@@ -84,14 +84,14 @@ function Heatmap({ repos }) {
       </div>
 
       {/* Tooltip line */}
-      <div className="text-xs mb-3 h-4" style={{ color: '#8b949e' }}>
+      <div className="h-4 mb-3 text-xs" style={{ color: '#8b949e' }}>
         {hovered
           ? `${hovered.key} — ${hovered.level === 0 ? 'No recorded activity' : `Activity level ${hovered.level} / 4`}`
           : 'Hover a cell for details'}
       </div>
 
       {/* Scrollable grid */}
-      <div className="overflow-x-auto pb-2">
+      <div className="pb-2 overflow-x-auto">
         <div className="relative" style={{ minWidth: 700 }}>
 
           {/* Month labels */}
@@ -114,7 +114,7 @@ function Heatmap({ repos }) {
                 {week.map((day) => (
                   <div
                     key={day.key}
-                    className="contrib-cell rounded-sm"
+                    className="rounded-sm contrib-cell"
                     onMouseEnter={() => setHovered(day)}
                     onMouseLeave={() => setHovered(null)}
                     style={{
@@ -129,8 +129,8 @@ function Heatmap({ repos }) {
           </div>
 
           {/* Legend */}
-          <div className="flex items-center gap-1 mt-2 justify-end">
-            <span className="text-xs mr-1" style={{ color: '#8b949e' }}>Less</span>
+          <div className="flex items-center justify-end gap-1 mt-2">
+            <span className="mr-1 text-xs" style={{ color: '#8b949e' }}>Less</span>
             {CONTRIB_LEVELS.map((color) => (
               <div
                 key={color}
@@ -138,7 +138,7 @@ function Heatmap({ repos }) {
                 style={{ width: 11, height: 11, background: color }}
               />
             ))}
-            <span className="text-xs ml-1" style={{ color: '#8b949e' }}>More</span>
+            <span className="ml-1 text-xs" style={{ color: '#8b949e' }}>More</span>
           </div>
         </div>
       </div>
@@ -159,7 +159,7 @@ function RecentActivity({ repos }) {
       style={{ background: '#161b22', border: '1px solid #30363d' }}
     >
       <h3
-        className="flex items-center gap-2 text-sm font-semibold mb-4"
+        className="flex items-center gap-2 mb-4 text-sm font-semibold"
         style={{ color: '#e6edf3' }}
       >
         <span style={{ color: '#8b949e', display: 'flex' }}><RepoIcon /></span>
@@ -170,7 +170,7 @@ function RecentActivity({ repos }) {
         {sorted.map((repo, idx) => (
           <div
             key={repo.id}
-            className="flex items-center gap-3 py-3"
+            className="flex flex-wrap items-center gap-3 py-3"
             style={{
               borderBottom: idx < sorted.length - 1 ? '1px solid #21262d' : 'none',
             }}

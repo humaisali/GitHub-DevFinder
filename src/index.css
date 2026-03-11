@@ -84,3 +84,19 @@ select {
 .contrib-cell:hover {
   transform: scale(1.4);
 }
+
+/* ── Layout Helpers for Responsiveness ── */
+.layout-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 285px) 1fr;
+}
+
+@media (max-width: 768px) {
+  .layout-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .layout-grid-sidebar {
+    position: static !important;
+  }
+}

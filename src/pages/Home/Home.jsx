@@ -19,7 +19,7 @@ import { useTabs }          from './useTabs'
 function Sidebar({ user, langStats }) {
   return (
     <aside
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-4 layout-grid-sidebar"
       style={{ position: 'sticky', top: 68 }}
     >
       <ProfileCard user={user} />
@@ -74,8 +74,7 @@ export default function Home() {
 
         {showResults && (
           <div
-            className="grid gap-5 items-start animate-fade-in-up"
-            style={{ gridTemplateColumns: 'minmax(250px, 285px) 1fr' }}
+            className="layout-grid gap-5 items-start animate-fade-in-up"
           >
             {/* Left: sticky sidebar */}
             <Sidebar user={user} langStats={langStats} />

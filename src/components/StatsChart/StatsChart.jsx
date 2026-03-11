@@ -68,7 +68,7 @@ function LanguagePieChart({ stats }) {
         Language Statistics
       </h3>
 
-      <div className="grid grid-cols-2 gap-6 items-center">
+      <div className="grid gap-6 items-center sm:grid-cols-2">
         {/* Donut chart */}
         <ResponsiveContainer width="100%" height={180}>
           <PieChart>
