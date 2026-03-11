@@ -29,7 +29,7 @@ export default function WelcomeScreen({ onSearch }) {
       </h1>
       <p className="max-w-md mb-10 text-sm leading-relaxed" style={{ color: '#8b949e' }}>
         Search any GitHub username to explore their full profile, repositories,
-        language distribution, and activity overview — all in one place.
+        language distribution, and activity overview all in one place.
       </p>
 
       <div className="grid w-full max-w-xl grid-cols-2 gap-3 mb-10 sm:grid-cols-4">
