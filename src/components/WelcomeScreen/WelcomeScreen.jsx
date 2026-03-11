@@ -7,7 +7,7 @@ const FEATURES = [
   { Icon: ActivityIcon, label: 'Activity Graph' },
 ]
 
-const EXAMPLE_USERS = ['alikhan-devs', 'humaisali', 'sindresorhus', 'tj', 'addyosmani']
+const EXAMPLE_USERS = ['alikhan-devs', 'humaisali']
 
 /**
  * WelcomeScreen
